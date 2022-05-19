@@ -21,6 +21,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define _BASE 0
 
+enum layers {
+    _BASE = 0,
+    _VIA1,
+    _VIA2,
+    _VIA3
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BASE] = LAYOUT(
