@@ -19,8 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "status.h"
 #include QMK_KEYBOARD_H
 
-#define _BASE 0
-
 enum layers {
     _BASE = 0,
     _VIA1,
@@ -29,27 +27,24 @@ enum layers {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-[_BASE] = LAYOUT(
+   [_BASE] = LAYOUT(
     KC_F13, KC_F14, KC_F15,
     KC_F16, KC_F17, KC_F18
-)
+   )
 
-[_VIA1] = LAYOUT(
+   [_VIA1] = LAYOUT(
     _______, _______, _______,
     _______, _______, _______
-),
-
-[_VIA2] = LAYOUT(
+   ),
+   [_VIA2] = LAYOUT(
     _______, _______, _______,
     _______, _______, _______
-),
+   ),
 
-[_VIA3] = LAYOUT(
+   [_VIA3] = LAYOUT(
     _______, _______, _______,
     _______, _______, _______
-)
-
+   )
 };
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_270; }
